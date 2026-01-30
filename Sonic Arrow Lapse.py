@@ -34,7 +34,7 @@ except pygame.error:
     background_image.fill(TAN)
 
 # ---------------- INTRO IMAGE ----------------
-INTRO_IMAGE = pygame.image.load("Intro.jpg").convert_alpha()
+INTRO_IMAGE = pygame.image.load("Sonic.jpg").convert_alpha()
 intro_rect = INTRO_IMAGE.get_rect(center=(WIDTH // 2, HEIGHT // 4))
 
 BAR_Y = HEIGHT // 2
