@@ -9,10 +9,10 @@ pygame.init()
 # ---------------- CONFIG ----------------
 WIDTH, HEIGHT = 800, 600
 SCREEN = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Arrow Timing Game")
+pygame.display.set_caption("Umbre's Arrow Lapse")
 CLOCK = pygame.time.Clock()
 FPS = 60
-GAME_DURATION = 120  # seconds (2 minutes)
+GAME_DURATION = 120  # seconds
 
 # ---------------- COLORS ----------------
 GRAY = (150, 150, 150)
@@ -52,7 +52,7 @@ def load_gif(path, max_w=None, max_h=None):
 
 # ---------------- GAMEPLAY GIF ----------------
 PLAY_FRAMES, PLAY_DURATIONS = load_gif(
-    os.path.join("gifs", "Umbreon dancing.gif"),
+    os.path.join("gifs", "Playing.gif"),
     WIDTH * 0.6,
     HEIGHT * 0.35
 )
@@ -169,7 +169,7 @@ while True:
 
     # -------- START SCREEN --------
     if not game_started:
-        title = BIG_FONT.render("Arrow Timing Game", True, YELLOW)
+        title = BIG_FONT.render("Umbre's Arrow Lapse", True, YELLOW)
         SCREEN.blit(title, title.get_rect(center=(WIDTH//2, HEIGHT//3)))
         start_button.draw()
 
@@ -220,8 +220,6 @@ while True:
 
     # -------- GAME OVER --------
     else:
-        over = BIG_FONT.render("Time's Up!", True, YELLOW)
-        SCREEN.blit(over, over.get_rect(center=(WIDTH//2, HEIGHT//2)))
         play_again_button.draw()
 
     pygame.display.flip()
